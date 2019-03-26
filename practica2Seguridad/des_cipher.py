@@ -12,12 +12,14 @@ class DESCipher:
 
     __BLOCK_SIZE_DES = 8
 
-    def __init__(self, key: bytearray) -> None:
+    def __init__(self, key) -> None:
         """
         Initializes the object with the key we will be using to cipher and decipher.
         :param key: the mighty key we will use.
         """
         super().__init__()
+        if type(key) != bytes:
+            key = key.encode('utf-8')
         self.__key = key
 
     def cipher(self, string_to_cipher, iv) -> bytes:
