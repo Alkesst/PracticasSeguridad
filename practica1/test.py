@@ -1,4 +1,4 @@
-from practica1Seguridad import ejercicio1, ejercicio2, ejercicio3
+from practica1 import ejercicio1, ejercicio2, ejercicio3
 
 
 def main():

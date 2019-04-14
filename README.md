@@ -3,7 +3,9 @@ Creo que el título es bastante descriptivo no creen
 
 Repositorio en el que meteré todas las movidas estas chungas de seguridad tu sabes.
 
-Spoiler: movidas chungas == prácticas de seguridad
+Spoiler: movidas chungas == prácticas de seguridad.
+Toda esta movida pertenece a la UMA tu sabes solo subo el código pero los ejercicios
+los ha desarrollado el departamento de LCC de la uma supongo yo solo resuelvo las prácticas
 
 ## Práctica 1
 Dado el siguiente código Python, que implementa el cifrado Cesar (+3) para el
