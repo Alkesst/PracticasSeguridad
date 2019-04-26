@@ -48,4 +48,4 @@ if __name__ == '__main__':
     key = get_random_bytes(16)
     print(key)
     send_protocol_using_rsa(key)
-    ### Por algún motivo no funciona y devuelve NONE
+    #  El tamaño es el mismo.

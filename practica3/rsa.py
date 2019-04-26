@@ -64,7 +64,7 @@ class RSAObject(object):
         engineRSADescifrado = PKCS1_OAEP.new(self.private_key)
         try:
             datos = engineRSADescifrado.decrypt(cifrado)
-            return datos.decode("utf-8")
+            return datos
         except ValueError:
             return None
 
