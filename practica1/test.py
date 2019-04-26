@@ -1,6 +1,9 @@
 from practica1 import ejercicio1, ejercicio2, ejercicio3
 
 
+__author__ = "Alejandro Garau Madrigal"
+
+
 def main():
     print(ejercicio1.basic_caesar_cipher("CIFRADO BASICO SOLO MAYUSCULAS"))
     print('Descifrando....')

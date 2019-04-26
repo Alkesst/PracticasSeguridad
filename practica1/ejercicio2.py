@@ -1,3 +1,6 @@
+__author__ = "Alejandro Garau Madrigal"
+
+
 def caesar_cipher2(input_text: str) -> str:
     """
     The mighty function to cipher a text using caesar algorithm.

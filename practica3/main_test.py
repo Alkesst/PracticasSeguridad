@@ -1,10 +1,14 @@
-__author__ = "Alejandro Garau Madrigal"
 from practica3.rsa import RSAObject
+from Cryptodome.Random import get_random_bytes
+
+
+__author__ = "Alejandro Garau Madrigal"
+
 
 RELATIVE_PATH = '/Users/alec/Desktop/{}'
 
 
-def main():
+def send_protocol_using_rsa(message_to_send):
     a = RSAObject()
     print("Created client A")
     b = RSAObject()
@@ -22,10 +26,10 @@ def main():
 
     # Ciframos el mensaje:
 
-    ciphered = b.cipher("Hola Amigos de la Seguridad")
+    ciphered = b.cipher(message_to_send)
     print("A ciphered the message using the public key of client B.")
     print(ciphered)
-
+    print("Bytes to send: {}".format(len(ciphered)))
     s = a.sign(ciphered)
     print("Client A signed the content using his own public key.")
     print("Sending ciphered and signed text to B client...")
@@ -38,4 +42,10 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    send_protocol_using_rsa("Hola Amigos de la Seguridad")
+    print("\n\n\n\n\n")
+    print("Now we will send a session key using RSA.")
+    key = get_random_bytes(16)
+    print(key)
+    send_protocol_using_rsa(key)
+    ### Por algún motivo no funciona y devuelve NONE
