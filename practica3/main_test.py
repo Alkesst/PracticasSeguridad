@@ -5,7 +5,7 @@ from Cryptodome.Random import get_random_bytes
 __author__ = "Alejandro Garau Madrigal"
 
 
-RELATIVE_PATH = '/Users/alec/Desktop/{}'
+RELATIVE_PATH = './{}'
 
 
 def send_protocol_using_rsa(message_to_send):
