@@ -44,6 +44,20 @@ def ejercicio2():
         print("The message or the key is wrong")
 
 
+def ejercicio3():
+    hash_object = SHA512.new()
+    with open('text.docx', 'rb') as file:
+        current_4k_block = file.read(4096)
+        while current_4k_block != b'':
+            hash_object.update(current_4k_block)
+            current_4k_block = file.read(4096)
+        hashed_lines = hash_object.digest()
+        print(hashed_lines)
+        print(hash_object.hexdigest())
+
+
 if __name__ == "__main__":
     ejercicio1()
     ejercicio2()
+    ejercicio3()
+
